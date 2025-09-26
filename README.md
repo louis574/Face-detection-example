@@ -78,6 +78,21 @@ Ensures model focuses on learning actual face features instead of background sim
 
  - Used Windows Subsystem for Linux (WSL) to efficiently manage large-scale file operations and batch processing across thousands of images.
 
+ ## 📊 Results
+
+- **Accuracy:** Achieved **88% accuracy** on this data after training (12-bit fixed-point, Q3.9 format).  
+- **Robustness:** The custom dataset with meant strong generalization across **lighting conditions, head angles, facial expressions, ethnicities, and varied backgrounds**.  
+- **Latency & Performance:**  
+  - Critical path: **12.5 ns** (max clk - 80MHz) 
+  - Inference latency: **775ns** (72 cycles at 80 MHz)  
+- **FPGA Resource Utilization (Artix-7 100T):**  
+  - LUTs: **28k** (≈45% of device)  
+  - DSPs: **184** (≈76% of device)  
+- **Synthesis:** The design was fully synthesizable in Vivado, meeting **timing constraints** and **pin assignments** without exceeding resource limits.
+
+ ✅ These results demonstrate that the framework enables **ultra-low-latency neural network inference** on a mid-range FPGA, balancing **accuracy, speed, and resource utilization**, and is fully configurable for a **range of different tasks** beyond MNIST and into deep neural nets.
+
+
 
 
 
